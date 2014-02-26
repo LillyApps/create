@@ -1,0 +1,14 @@
+body {
+  margin: 1em;
+  text-align: center;
+}
+
+ul, ol {
+  list-style: none;
+  list-style-position: inside;
+}
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+}
