@@ -1,5 +1,11 @@
+.container {
+  overflow-x: hidden;
+}
+
 #photos {
   text-align: center;
+  margin: 0 -306px;
+  margin-bottom: -306px;
 }
 
 #player {

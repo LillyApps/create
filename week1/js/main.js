@@ -25,7 +25,7 @@ function fetchInstagramPhotos(url) {
 }
 
 function fetchInstagramPhotosWithTag(tag, callbackFunction) {
-  var url = 'https://api.instagram.com/v1/tags/' + tag + '/media/recent/?client_id='+ CLIENT_ID + '&callback=' + callbackFunction;
+  var url = 'https://api.instagram.com/v1/tags/' + tag + '/media/recent/?count=100&client_id='+ CLIENT_ID + '&callback=' + callbackFunction;
   fetchInstagramPhotos(url);
 }
 
