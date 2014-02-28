@@ -1,5 +1,13 @@
 var CLIENT_ID = '3c52889feb714456b62ba61fe7add54b';
 
+function hideSpinner() {
+  document.getElementsByClassName('icon-spinner')[0].classList.add('hidden');
+}
+
+function showPlay() {
+  document.getElementsByClassName('icon-play')[0].classList.remove('hidden');
+}
+
 function parseAndRenderInstagramResponse(response) {
   addPhotosToDOM(response.data);
 }
@@ -15,6 +23,9 @@ function addPhotosToDOM(photos) {
     imgEl.src = photo.images.low_resolution.url;
     photosEl.appendChild(imgEl);   
   }
+  
+  hideSpinner();
+  showPlay();
 }
 
 function fetchInstagramPhotos(url) {
