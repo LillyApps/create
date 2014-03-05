@@ -1,4 +1,5 @@
 var CLIENT_ID = '3c52889feb714456b62ba61fe7add54b';
+var TAG = 'flytteesker';
 
 function hideSpinner() {
   document.getElementsByClassName('icon-spinner')[0].classList.add('hidden');
@@ -40,4 +41,26 @@ function fetchInstagramPhotosWithTag(tag, callbackFunction) {
   fetchInstagramPhotos(url);
 }
 
-fetchInstagramPhotosWithTag('flytteesker', 'parseAndRenderInstagramResponse');
+function playSound() {
+  console.log("play");
+}
+
+function pauseSound() {
+  console.log("pause");
+}
+
+function togglePlayer() {
+  document.getElementsByClassName('icon-play')[0].classList.toggle('hidden');
+  document.getElementsByClassName('icon-pause')[0].classList.toggle('hidden');
+  
+  if(document.getElementsByClassName('icon-play')[0].classList.contains('hidden')) {
+    playSound(); 
+  } else {
+    pauseSound();
+  }
+}
+
+fetchInstagramPhotosWithTag(TAG, 'parseAndRenderInstagramResponse');
+document.getElementById('player').onclick=togglePlayer;
+
+

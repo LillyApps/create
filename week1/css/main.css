@@ -66,11 +66,15 @@ nav a:hover {
 }
 
 #player .icon-spinner {
-  margin-left: -5px;
+  margin-left: -4px;
 }
 
 #player .icon-play {
   padding-left: 20px;
+}
+
+#player .icon-pause {
+  margin-left: -5px;
 }
 
 #player .timer {
